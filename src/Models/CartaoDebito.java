@@ -8,7 +8,7 @@ public class CartaoDebito implements Pagamento{
     public void pagar(Mesa mesa){
         Scanner sc = new Scanner(System.in);
         System.out.println("Pode inserir o cartão, e digite a senha:");
-        sc.nextLine();
+        int senha = sc.nextInt();
         System.out.println("O pagamento de R$" + mesa.getConta() + " Foi realizado com sucesso!");
     }
 }

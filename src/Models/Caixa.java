@@ -8,6 +8,5 @@ public class Caixa extends Funcionario {
 
     public void FinalizaAtendimento(Mesa mesa, Pagamento pagamento){
         pagamento.pagar(mesa);
-
     }
 }
