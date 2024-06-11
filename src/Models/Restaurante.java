@@ -1,6 +1,7 @@
 package Models;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Restaurante {
     private Caixa caixa;
@@ -56,5 +57,26 @@ public class Restaurante {
             m.add(new Mesa(i, 10));
         }
         return m;
+    }
+
+
+    public  void atendimento(){
+        Scanner sc = new Scanner(System.in);
+        int p = this.recepcao.Recepciona();
+        Mesa m = mesas.get(0);
+        m.adicionaPessoas(p);
+        this.recepcao.levaMesa(m);
+        System.out.println("Pressione enter para continuar!");
+        sc.nextLine();
+        garcomPedidos(m);
+    }
+
+    private void garcomPedidos(Mesa m){
+        this.garcom.mostraCardapio();
+        int s = 0;
+        do {
+            System.out.println("Caso não queira mais pedir nada, por favor digite 1");
+            s = garcom.anotaPedido(m);
+        }while(s != 1);
     }
 }

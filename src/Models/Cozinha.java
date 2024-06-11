@@ -24,6 +24,7 @@ public class Cozinha extends Funcionario {
         if(!pedidos.isEmpty()) {
             pedidos.poll().setEstado(EstadoPedido.FEITO);
         }
+        System.out.println("Os pedidos estão prontos.");
     }
 
 }

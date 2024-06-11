@@ -1,15 +1,14 @@
 import Models.Garcom;
 import Models.Mesa;
+import Models.Restaurante;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Garcom g1 = new Garcom("João", 201);
-
-        g1.mostraCardapio();
-        g1.anotaPedido(new Mesa(1,3));
-
+        Scanner sc = new Scanner(System.in);
+        Restaurante r = new Restaurante();
+        r.atendimento();
         }
 }

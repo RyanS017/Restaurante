@@ -36,11 +36,12 @@ public class Garcom extends Funcionario {
         });
     }
 
-    public void anotaPedido(Mesa mesa){
+    public int anotaPedido(Mesa mesa){
         int n = pedidos.size();
         System.out.println("\nQual vai ser o pedido, por favor escreva o nome do item.");
         Scanner sc = new Scanner(System.in);
         String nome = sc.nextLine();
+        if(nome.equalsIgnoreCase("1")) return 1;
         cardapio.forEach(x -> {
             if(nome.equalsIgnoreCase(x.getNome())){
                 Pedido p = new Pedido(x, mesa);
@@ -52,6 +53,7 @@ public class Garcom extends Funcionario {
         if(pedidos.size() == n){
             System.out.println("Esse item não existe");
         }
+        return 0;
     }
 
     public ArrayList<Pedido> entregaPedidoCozinha(){
