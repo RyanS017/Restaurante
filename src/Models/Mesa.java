@@ -25,6 +25,9 @@ public class Mesa {
         this.id = id;
     }
 
+    public ArrayList<Pedido> getPedidos(){
+        return pedidos;
+    }
     public Mesa(int id, int lugares) {
         this.id = id;
         this.lugares = lugares;

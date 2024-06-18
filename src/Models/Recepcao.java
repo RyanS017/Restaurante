@@ -17,6 +17,6 @@ public class Recepcao extends Funcionario {
     }
 
     public void levaMesa(Mesa mesa){
-        System.out.println("Sua mesa será a mesa " + mesa.getId() + " Por aqui, por favor\nO garçom logo virá atende-los");
+        System.out.println("Sua mesa será a mesa " + mesa.getId() + " Por aqui, por favor.\nO garçom logo virá atende-los");
     }
 }

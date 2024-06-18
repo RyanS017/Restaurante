@@ -2,7 +2,7 @@ package Models;
 
 import java.util.Scanner;
 
-public class CartaoDebito implements Pagamento{
+public class PagamentoDebito implements Pagamento{
 
     @Override
     public void pagar(Mesa mesa){
